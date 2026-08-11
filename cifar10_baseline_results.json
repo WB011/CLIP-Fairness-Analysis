@@ -1,0 +1,6 @@
+{
+    "model_name": "ViT-B/32",
+    "dataset": "CIFAR-10",
+    "eval_samples": 512,
+    "top1_accuracy": 90.625
+}

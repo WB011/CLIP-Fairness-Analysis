@@ -1,0 +1,14 @@
+{
+    "model": "ViT-B/32",
+    "target_attribute": "gender",
+    "overall_accuracy": 93.9453125,
+    "subgroup_accuracies": {
+        "male person": 93.91634980988593,
+        "female person": 93.97590361445783
+    },
+    "subgroup_counts": {
+        "male person": 263,
+        "female person": 249
+    },
+    "fairness_disparity_gap": 0.05955380457190529
+}
