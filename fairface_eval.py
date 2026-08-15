@@ -28,13 +28,13 @@ logger = logging.getLogger(__name__)
 
 # Official FairFace Label Mappings (Cleaned for Tokenization)
 RACE_LABELS = [
-    "White",
-    "Black",
-    "Latino or Hispanic",
     "East Asian",
-    "Southeast Asian",
     "Indian",
+    "Black",
+    "White",
     "Middle Eastern",
+    "Latino or Hispanic",
+    "Southeast Asian",
 ]
 
 GENDER_LABELS = ["male person", "female person"]
