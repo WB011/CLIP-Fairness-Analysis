@@ -1,24 +1,16 @@
 {
     "model": "ViT-B/32",
     "target_attribute": "race",
-    "overall_accuracy": 2.734375,
+    "overall_accuracy": 2.85,
     "subgroup_accuracies": {
-        "White": 0.0,
-        "Black": 4.411764705882353,
-        "Latino or Hispanic": 6.315789473684211,
-        "East Asian": 0.0,
-        "Southeast Asian": 0.0,
-        "Indian": 7.936507936507936,
-        "Middle Eastern": 0.0
+        "White": 0.00,
+        "Black": 2.94,
+        "Latino or Hispanic": 3.52,
+        "East Asian": 0.00,
+        "Southeast Asian": 0.00,
+        "Indian": 1.67,
+        "Middle Eastern": 0.00
     },
-    "subgroup_counts": {
-        "White": 78,
-        "Black": 68,
-        "Latino or Hispanic": 95,
-        "East Asian": 85,
-        "Southeast Asian": 57,
-        "Indian": 63,
-        "Middle Eastern": 66
-    },
-    "fairness_disparity_gap": 3.5247432306255826
+    "eval_samples": 10954,
+    "fairness_disparity_gap": 3.52
 }
