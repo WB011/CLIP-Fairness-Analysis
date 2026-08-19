@@ -132,7 +132,7 @@ def evaluate_mitigation(
     device: torch.device,
     max_samples: int = None
 ) -> float:
-    """Evaluates intersectional bias mitigation (Gender + Race)[cite: 1]."""
+    """Evaluates intersectional bias mitigation (Gender + Race)."""
     logger.info("Testing Bias Mitigation: Adding explicit gender context to prompts...")
 
     male_prompts = [f"a face photo of a {r.lower()} man" for r in race_labels]
