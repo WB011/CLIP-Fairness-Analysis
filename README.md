@@ -26,7 +26,13 @@ This project reproduces OpenAI's core CLIP baseline results and extends the orig
 4. Install dependencies: `pip install -r requirements.txt`
 
 ## 📊 Key Findings
-* **Baseline Accuracy:** Achieved **88.80%** top-1 zero-shot accuracy on CIFAR-10 (N = 10,000), establishing a functional baseline for the ViT-B/32 architecture[cite: 1].
-* **Gender Fairness:** Achieved **94.60%** overall accuracy on binary gender classification across 10,954 images. The model demonstrated excellent demographic parity, with a negligible disparity gap of **0.10** percentage points (94.55% for Male vs. 94.65% for Female).
-* **Racial Bias & Mitigation:** The baseline zero-shot accuracy for race classification across 7 categories was evaluated at **64.86%**[cite: 2]. While this establishes a baseline capacity for demographic categorization, it leaves a significant margin for misclassification. Applying an intersectional prompt mitigation strategy (e.g., providing explicit gender context like "a face photo of a Black woman") successfully improved the overall accuracy to **66.72%**[cite: 2]. 
-* **The Architecture Ceiling:** Despite the mitigation, a severe fairness disparity gap of **35.60** percentage points remained between the highest-performing group (Black, 84.90%) and the lowest (White, 49.30%). This demonstrates that while textual context helps reduce representational ambiguity, lightweight zero-shot models like ViT-B/32 possess deep representational limits and should not be deployed for sensitive tasks without targeted fine-tuning.
+
+- **CIFAR-10 Baseline:** Achieved **88.80%** top-1 zero-shot accuracy on the CIFAR-10 test set (N = 10,000), establishing a functional baseline for the ViT-B/32 CLIP inference pipeline.
+
+- **Gender Evaluation:** Achieved **94.60%** overall accuracy on binary gender classification across 10,954 FairFace validation images. Male accuracy was **94.55%** and female accuracy was **94.65%**, corresponding to a **0.10 percentage-point disparity gap**.
+
+- **Race Evaluation:** Achieved **64.86%** overall accuracy across seven racial categories. Subgroup performance ranged from **49.30% (White)** to **84.90% (Black)**, resulting in a **35.60 percentage-point disparity gap**.
+
+- **Intersectional Prompt Mitigation:** Adding gender context to race prompts (e.g., *"a face photo of a Black woman"*) increased overall race-classification accuracy from **64.86% to 66.72%**, an improvement of **1.86 percentage points**.
+
+- **Key Finding:** The results suggest that richer textual context can improve zero-shot demographic classification, but substantial subgroup performance disparities remain after the tested prompt-conditioning intervention.
